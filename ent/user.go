@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"entgo.io/ent/dialect/sql"
-	"story.com/story/app/ent/user"
+	"go-gql-sample/app/ent/user"
 )
 
 // User is the model entity for the User schema.

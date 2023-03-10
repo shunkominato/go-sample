@@ -5,9 +5,10 @@ import (
 	"net/http"
 	"os"
 
+	"go-gql-sample/app/internal/infrastructure/server/graph"
+
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
-	"story.com/story/app/internal/infrastructure/server/graph"
 )
 
 const defaultPort = "8080"

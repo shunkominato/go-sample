@@ -10,9 +10,9 @@ import (
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"story.com/story/app/ent/todo"
-	"story.com/story/app/ent/todostatus"
-	"story.com/story/app/ent/user"
+	"go-gql-sample/app/ent/todo"
+	"go-gql-sample/app/ent/todostatus"
+	"go-gql-sample/app/ent/user"
 )
 
 // TodoCreate is the builder for creating a Todo entity.

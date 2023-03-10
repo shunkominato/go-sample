@@ -8,17 +8,17 @@ import (
 	"fmt"
 	"log"
 
-	"story.com/story/app/ent/migrate"
+	"go-gql-sample/app/ent/migrate"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
-	"story.com/story/app/ent/arinternalmetadatum"
-	"story.com/story/app/ent/schemamigration"
-	"story.com/story/app/ent/todo"
-	"story.com/story/app/ent/todostatus"
-	"story.com/story/app/ent/user"
+	"go-gql-sample/app/ent/arinternalmetadatum"
+	"go-gql-sample/app/ent/schemamigration"
+	"go-gql-sample/app/ent/todo"
+	"go-gql-sample/app/ent/todostatus"
+	"go-gql-sample/app/ent/user"
 )
 
 // Client is the client that holds all ent builders.

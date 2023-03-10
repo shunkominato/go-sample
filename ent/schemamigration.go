@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"entgo.io/ent/dialect/sql"
-	"story.com/story/app/ent/schemamigration"
+	"go-gql-sample/app/ent/schemamigration"
 )
 
 // SchemaMigration is the model entity for the SchemaMigration schema.

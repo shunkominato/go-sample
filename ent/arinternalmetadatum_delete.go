@@ -8,8 +8,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"story.com/story/app/ent/arinternalmetadatum"
-	"story.com/story/app/ent/predicate"
+	"go-gql-sample/app/ent/arinternalmetadatum"
+	"go-gql-sample/app/ent/predicate"
 )
 
 // ArInternalMetadatumDelete is the builder for deleting a ArInternalMetadatum entity.

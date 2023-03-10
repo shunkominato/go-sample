@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"entgo.io/ent/dialect/sql"
-	"story.com/story/app/ent/arinternalmetadatum"
+	"go-gql-sample/app/ent/arinternalmetadatum"
 )
 
 // ArInternalMetadatum is the model entity for the ArInternalMetadatum schema.

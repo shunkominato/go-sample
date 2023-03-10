@@ -10,8 +10,8 @@ import (
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"story.com/story/app/ent/todo"
-	"story.com/story/app/ent/todostatus"
+	"go-gql-sample/app/ent/todo"
+	"go-gql-sample/app/ent/todostatus"
 )
 
 // TodoStatusCreate is the builder for creating a TodoStatus entity.

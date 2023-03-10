@@ -10,7 +10,7 @@ import (
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"story.com/story/app/ent/arinternalmetadatum"
+	"go-gql-sample/app/ent/arinternalmetadatum"
 )
 
 // ArInternalMetadatumCreate is the builder for creating a ArInternalMetadatum entity.

@@ -1,4 +1,4 @@
-module story.com/story/app
+module go-gql-sample/app
 
 go 1.20
 

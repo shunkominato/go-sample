@@ -10,8 +10,8 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"story.com/story/app/ent/predicate"
-	"story.com/story/app/ent/schemamigration"
+	"go-gql-sample/app/ent/predicate"
+	"go-gql-sample/app/ent/schemamigration"
 )
 
 // SchemaMigrationUpdate is the builder for updating SchemaMigration entities.

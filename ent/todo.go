@@ -8,9 +8,9 @@ import (
 	"time"
 
 	"entgo.io/ent/dialect/sql"
-	"story.com/story/app/ent/todo"
-	"story.com/story/app/ent/todostatus"
-	"story.com/story/app/ent/user"
+	"go-gql-sample/app/ent/todo"
+	"go-gql-sample/app/ent/todostatus"
+	"go-gql-sample/app/ent/user"
 )
 
 // Todo is the model entity for the Todo schema.

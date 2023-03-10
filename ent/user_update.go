@@ -12,9 +12,9 @@ import (
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/dialect/sql/sqljson"
 	"entgo.io/ent/schema/field"
-	"story.com/story/app/ent/predicate"
-	"story.com/story/app/ent/todo"
-	"story.com/story/app/ent/user"
+	"go-gql-sample/app/ent/predicate"
+	"go-gql-sample/app/ent/todo"
+	"go-gql-sample/app/ent/user"
 )
 
 // UserUpdate is the builder for updating User entities.

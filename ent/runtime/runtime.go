@@ -2,7 +2,7 @@
 
 package runtime
 
-// The schema-stitching logic is generated in story.com/story/app/ent/runtime.go
+// The schema-stitching logic is generated in go-gql-sample/app/ent/runtime.go
 
 const (
 	Version = "v0.11.9"                                         // Version of ent codegen.

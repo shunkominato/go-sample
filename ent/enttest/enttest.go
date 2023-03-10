@@ -5,12 +5,12 @@ package enttest
 import (
 	"context"
 
-	"story.com/story/app/ent"
+	"go-gql-sample/app/ent"
 	// required by schema hooks.
-	_ "story.com/story/app/ent/runtime"
+	_ "go-gql-sample/app/ent/runtime"
 
 	"entgo.io/ent/dialect/sql/schema"
-	"story.com/story/app/ent/migrate"
+	"go-gql-sample/app/ent/migrate"
 )
 
 type (

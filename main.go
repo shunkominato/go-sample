@@ -5,8 +5,9 @@ import (
 	"fmt"
 	"log"
 
+	"go-gql-sample/app/ent"
+
 	_ "github.com/lib/pq"
-	"story.com/story/app/ent"
 )
 
 func main_() {

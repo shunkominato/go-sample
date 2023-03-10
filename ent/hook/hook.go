@@ -6,7 +6,7 @@ import (
 	"context"
 	"fmt"
 
-	"story.com/story/app/ent"
+	"go-gql-sample/app/ent"
 )
 
 // The ArInternalMetadatumFunc type is an adapter to allow the use of ordinary

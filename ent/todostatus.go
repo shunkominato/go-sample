@@ -8,7 +8,7 @@ import (
 	"time"
 
 	"entgo.io/ent/dialect/sql"
-	"story.com/story/app/ent/todostatus"
+	"go-gql-sample/app/ent/todostatus"
 )
 
 // TodoStatus is the model entity for the TodoStatus schema.

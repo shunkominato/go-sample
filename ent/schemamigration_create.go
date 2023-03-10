@@ -8,7 +8,7 @@ import (
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"story.com/story/app/ent/schemamigration"
+	"go-gql-sample/app/ent/schemamigration"
 )
 
 // SchemaMigrationCreate is the builder for creating a SchemaMigration entity.

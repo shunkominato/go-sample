@@ -11,11 +11,11 @@ import (
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"
-	"story.com/story/app/ent/arinternalmetadatum"
-	"story.com/story/app/ent/predicate"
-	"story.com/story/app/ent/todo"
-	"story.com/story/app/ent/todostatus"
-	"story.com/story/app/ent/user"
+	"go-gql-sample/app/ent/arinternalmetadatum"
+	"go-gql-sample/app/ent/predicate"
+	"go-gql-sample/app/ent/todo"
+	"go-gql-sample/app/ent/todostatus"
+	"go-gql-sample/app/ent/user"
 )
 
 const (

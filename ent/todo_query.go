@@ -10,10 +10,10 @@ import (
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"story.com/story/app/ent/predicate"
-	"story.com/story/app/ent/todo"
-	"story.com/story/app/ent/todostatus"
-	"story.com/story/app/ent/user"
+	"go-gql-sample/app/ent/predicate"
+	"go-gql-sample/app/ent/todo"
+	"go-gql-sample/app/ent/todostatus"
+	"go-gql-sample/app/ent/user"
 )
 
 // TodoQuery is the builder for querying Todo entities.
