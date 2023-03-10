@@ -3,11 +3,11 @@
 package todostatus
 
 import (
+	"go-gql-sample/app/ent/predicate"
 	"time"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
-	"go-gql-sample/app/ent/predicate"
 )
 
 // ID filters vertices based on their ID field.

@@ -8,6 +8,7 @@ import (
 	"embed"
 	"errors"
 	"fmt"
+	"go-gql-sample/app/internal/infrastructure/server/graph/model"
 	"strconv"
 	"sync"
 	"sync/atomic"
@@ -16,7 +17,6 @@ import (
 	"github.com/99designs/gqlgen/graphql/introspection"
 	gqlparser "github.com/vektah/gqlparser/v2"
 	"github.com/vektah/gqlparser/v2/ast"
-	"go-gql-sample/app/internal/infrastructure/server/graph/model"
 )
 
 // region    ************************** generated!.gotpl **************************
@@ -472,7 +472,7 @@ func (ec *executionContext) field_Mutation_createTodoStatus_args(ctx context.Con
 	var arg0 model.CreateTodoStatusInput
 	if tmp, ok := rawArgs["input"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
-		arg0, err = ec.unmarshalNCreateTodoStatusInput2storyᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐCreateTodoStatusInput(ctx, tmp)
+		arg0, err = ec.unmarshalNCreateTodoStatusInput2goᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐCreateTodoStatusInput(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -487,7 +487,7 @@ func (ec *executionContext) field_Mutation_createTodo_args(ctx context.Context, 
 	var arg0 model.CreateTodoInput
 	if tmp, ok := rawArgs["input"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
-		arg0, err = ec.unmarshalNCreateTodoInput2storyᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐCreateTodoInput(ctx, tmp)
+		arg0, err = ec.unmarshalNCreateTodoInput2goᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐCreateTodoInput(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -532,7 +532,7 @@ func (ec *executionContext) field_Mutation_updateTodoStatus_args(ctx context.Con
 	var arg0 model.UpdateTodoStatusInput
 	if tmp, ok := rawArgs["input"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
-		arg0, err = ec.unmarshalNUpdateTodoStatusInput2storyᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUpdateTodoStatusInput(ctx, tmp)
+		arg0, err = ec.unmarshalNUpdateTodoStatusInput2goᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUpdateTodoStatusInput(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -547,7 +547,7 @@ func (ec *executionContext) field_Mutation_updateTodo_args(ctx context.Context, 
 	var arg0 model.UpdateTodoInput
 	if tmp, ok := rawArgs["input"]; ok {
 		ctx := graphql.WithPathContext(ctx, graphql.NewPathWithField("input"))
-		arg0, err = ec.unmarshalNUpdateTodoInput2storyᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUpdateTodoInput(ctx, tmp)
+		arg0, err = ec.unmarshalNUpdateTodoInput2goᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUpdateTodoInput(ctx, tmp)
 		if err != nil {
 			return nil, err
 		}
@@ -705,7 +705,7 @@ func (ec *executionContext) _Mutation_createTodo(ctx context.Context, field grap
 	}
 	res := resTmp.(*model.Todo)
 	fc.Result = res
-	return ec.marshalNTodo2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, field.Selections, res)
+	return ec.marshalNTodo2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createTodo(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -769,7 +769,7 @@ func (ec *executionContext) _Mutation_updateTodo(ctx context.Context, field grap
 	}
 	res := resTmp.(*model.Todo)
 	fc.Result = res
-	return ec.marshalNTodo2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, field.Selections, res)
+	return ec.marshalNTodo2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_updateTodo(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -887,7 +887,7 @@ func (ec *executionContext) _Mutation_createTodoStatus(ctx context.Context, fiel
 	}
 	res := resTmp.(*model.TodoStatus)
 	fc.Result = res
-	return ec.marshalNTodoStatus2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx, field.Selections, res)
+	return ec.marshalNTodoStatus2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_createTodoStatus(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -947,7 +947,7 @@ func (ec *executionContext) _Mutation_updateTodoStatus(ctx context.Context, fiel
 	}
 	res := resTmp.(*model.TodoStatus)
 	fc.Result = res
-	return ec.marshalNTodoStatus2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx, field.Selections, res)
+	return ec.marshalNTodoStatus2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Mutation_updateTodoStatus(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1322,7 +1322,7 @@ func (ec *executionContext) _Query_todo(ctx context.Context, field graphql.Colle
 	}
 	res := resTmp.(*model.Todo)
 	fc.Result = res
-	return ec.marshalOTodo2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, field.Selections, res)
+	return ec.marshalOTodo2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_todo(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1386,7 +1386,7 @@ func (ec *executionContext) _Query_todoPagination(ctx context.Context, field gra
 	}
 	res := resTmp.(*model.TodoPagination)
 	fc.Result = res
-	return ec.marshalNTodoPagination2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoPagination(ctx, field.Selections, res)
+	return ec.marshalNTodoPagination2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoPagination(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_todoPagination(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1443,7 +1443,7 @@ func (ec *executionContext) _Query_todoStatus(ctx context.Context, field graphql
 	}
 	res := resTmp.(*model.TodoStatus)
 	fc.Result = res
-	return ec.marshalOTodoStatus2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx, field.Selections, res)
+	return ec.marshalOTodoStatus2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_todoStatus(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1500,7 +1500,7 @@ func (ec *executionContext) _Query_user(ctx context.Context, field graphql.Colle
 	}
 	res := resTmp.(*model.User)
 	fc.Result = res
-	return ec.marshalOUser2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUser(ctx, field.Selections, res)
+	return ec.marshalOUser2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUser(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Query_user(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1778,7 +1778,7 @@ func (ec *executionContext) _Todo_todoStatus(ctx context.Context, field graphql.
 	}
 	res := resTmp.(*model.TodoStatus)
 	fc.Result = res
-	return ec.marshalNTodoStatus2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx, field.Selections, res)
+	return ec.marshalNTodoStatus2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Todo_todoStatus(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1828,7 +1828,7 @@ func (ec *executionContext) _Todo_user(ctx context.Context, field graphql.Collec
 	}
 	res := resTmp.(*model.User)
 	fc.Result = res
-	return ec.marshalNUser2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUser(ctx, field.Selections, res)
+	return ec.marshalNUser2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUser(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_Todo_user(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1880,7 +1880,7 @@ func (ec *executionContext) _TodoPagination_pageInfo(ctx context.Context, field 
 	}
 	res := resTmp.(*model.PaginationInfo)
 	fc.Result = res
-	return ec.marshalNPaginationInfo2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐPaginationInfo(ctx, field.Selections, res)
+	return ec.marshalNPaginationInfo2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐPaginationInfo(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_TodoPagination_pageInfo(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -1938,7 +1938,7 @@ func (ec *executionContext) _TodoPagination_nodes(ctx context.Context, field gra
 	}
 	res := resTmp.([]*model.Todo)
 	fc.Result = res
-	return ec.marshalNTodo2ᚕᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoᚄ(ctx, field.Selections, res)
+	return ec.marshalNTodo2ᚕᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoᚄ(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_TodoPagination_nodes(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -2165,7 +2165,7 @@ func (ec *executionContext) _User_todo(ctx context.Context, field graphql.Collec
 	}
 	res := resTmp.([]*model.Todo)
 	fc.Result = res
-	return ec.marshalOTodo2ᚕᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, field.Selections, res)
+	return ec.marshalOTodo2ᚕᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, field.Selections, res)
 }
 
 func (ec *executionContext) fieldContext_User_todo(ctx context.Context, field graphql.CollectedField) (fc *graphql.FieldContext, err error) {
@@ -4918,12 +4918,12 @@ func (ec *executionContext) marshalNBoolean2bool(ctx context.Context, sel ast.Se
 	return res
 }
 
-func (ec *executionContext) unmarshalNCreateTodoInput2storyᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐCreateTodoInput(ctx context.Context, v interface{}) (model.CreateTodoInput, error) {
+func (ec *executionContext) unmarshalNCreateTodoInput2goᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐCreateTodoInput(ctx context.Context, v interface{}) (model.CreateTodoInput, error) {
 	res, err := ec.unmarshalInputCreateTodoInput(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalNCreateTodoStatusInput2storyᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐCreateTodoStatusInput(ctx context.Context, v interface{}) (model.CreateTodoStatusInput, error) {
+func (ec *executionContext) unmarshalNCreateTodoStatusInput2goᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐCreateTodoStatusInput(ctx context.Context, v interface{}) (model.CreateTodoStatusInput, error) {
 	res, err := ec.unmarshalInputCreateTodoStatusInput(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
@@ -4958,7 +4958,7 @@ func (ec *executionContext) marshalNInt2int(ctx context.Context, sel ast.Selecti
 	return res
 }
 
-func (ec *executionContext) marshalNPaginationInfo2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐPaginationInfo(ctx context.Context, sel ast.SelectionSet, v *model.PaginationInfo) graphql.Marshaler {
+func (ec *executionContext) marshalNPaginationInfo2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐPaginationInfo(ctx context.Context, sel ast.SelectionSet, v *model.PaginationInfo) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -4983,11 +4983,11 @@ func (ec *executionContext) marshalNString2string(ctx context.Context, sel ast.S
 	return res
 }
 
-func (ec *executionContext) marshalNTodo2storyᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx context.Context, sel ast.SelectionSet, v model.Todo) graphql.Marshaler {
+func (ec *executionContext) marshalNTodo2goᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx context.Context, sel ast.SelectionSet, v model.Todo) graphql.Marshaler {
 	return ec._Todo(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNTodo2ᚕᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Todo) graphql.Marshaler {
+func (ec *executionContext) marshalNTodo2ᚕᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoᚄ(ctx context.Context, sel ast.SelectionSet, v []*model.Todo) graphql.Marshaler {
 	ret := make(graphql.Array, len(v))
 	var wg sync.WaitGroup
 	isLen1 := len(v) == 1
@@ -5011,7 +5011,7 @@ func (ec *executionContext) marshalNTodo2ᚕᚖstoryᚗcomᚋstoryᚋappᚋinter
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalNTodo2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, sel, v[i])
+			ret[i] = ec.marshalNTodo2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5031,7 +5031,7 @@ func (ec *executionContext) marshalNTodo2ᚕᚖstoryᚗcomᚋstoryᚋappᚋinter
 	return ret
 }
 
-func (ec *executionContext) marshalNTodo2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx context.Context, sel ast.SelectionSet, v *model.Todo) graphql.Marshaler {
+func (ec *executionContext) marshalNTodo2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx context.Context, sel ast.SelectionSet, v *model.Todo) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -5041,11 +5041,11 @@ func (ec *executionContext) marshalNTodo2ᚖstoryᚗcomᚋstoryᚋappᚋinternal
 	return ec._Todo(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNTodoPagination2storyᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoPagination(ctx context.Context, sel ast.SelectionSet, v model.TodoPagination) graphql.Marshaler {
+func (ec *executionContext) marshalNTodoPagination2goᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoPagination(ctx context.Context, sel ast.SelectionSet, v model.TodoPagination) graphql.Marshaler {
 	return ec._TodoPagination(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNTodoPagination2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoPagination(ctx context.Context, sel ast.SelectionSet, v *model.TodoPagination) graphql.Marshaler {
+func (ec *executionContext) marshalNTodoPagination2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoPagination(ctx context.Context, sel ast.SelectionSet, v *model.TodoPagination) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -5055,11 +5055,11 @@ func (ec *executionContext) marshalNTodoPagination2ᚖstoryᚗcomᚋstoryᚋapp�
 	return ec._TodoPagination(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalNTodoStatus2storyᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx context.Context, sel ast.SelectionSet, v model.TodoStatus) graphql.Marshaler {
+func (ec *executionContext) marshalNTodoStatus2goᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx context.Context, sel ast.SelectionSet, v model.TodoStatus) graphql.Marshaler {
 	return ec._TodoStatus(ctx, sel, &v)
 }
 
-func (ec *executionContext) marshalNTodoStatus2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx context.Context, sel ast.SelectionSet, v *model.TodoStatus) graphql.Marshaler {
+func (ec *executionContext) marshalNTodoStatus2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx context.Context, sel ast.SelectionSet, v *model.TodoStatus) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -5069,17 +5069,17 @@ func (ec *executionContext) marshalNTodoStatus2ᚖstoryᚗcomᚋstoryᚋappᚋin
 	return ec._TodoStatus(ctx, sel, v)
 }
 
-func (ec *executionContext) unmarshalNUpdateTodoInput2storyᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUpdateTodoInput(ctx context.Context, v interface{}) (model.UpdateTodoInput, error) {
+func (ec *executionContext) unmarshalNUpdateTodoInput2goᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUpdateTodoInput(ctx context.Context, v interface{}) (model.UpdateTodoInput, error) {
 	res, err := ec.unmarshalInputUpdateTodoInput(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) unmarshalNUpdateTodoStatusInput2storyᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUpdateTodoStatusInput(ctx context.Context, v interface{}) (model.UpdateTodoStatusInput, error) {
+func (ec *executionContext) unmarshalNUpdateTodoStatusInput2goᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUpdateTodoStatusInput(ctx context.Context, v interface{}) (model.UpdateTodoStatusInput, error) {
 	res, err := ec.unmarshalInputUpdateTodoStatusInput(ctx, v)
 	return res, graphql.ErrorOnPath(ctx, err)
 }
 
-func (ec *executionContext) marshalNUser2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v *model.User) graphql.Marshaler {
+func (ec *executionContext) marshalNUser2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v *model.User) graphql.Marshaler {
 	if v == nil {
 		if !graphql.HasFieldError(ctx, graphql.GetFieldContext(ctx)) {
 			ec.Errorf(ctx, "the requested element is null which the schema does not allow")
@@ -5400,7 +5400,7 @@ func (ec *executionContext) marshalOString2ᚖstring(ctx context.Context, sel as
 	return res
 }
 
-func (ec *executionContext) marshalOTodo2ᚕᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx context.Context, sel ast.SelectionSet, v []*model.Todo) graphql.Marshaler {
+func (ec *executionContext) marshalOTodo2ᚕᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx context.Context, sel ast.SelectionSet, v []*model.Todo) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
@@ -5427,7 +5427,7 @@ func (ec *executionContext) marshalOTodo2ᚕᚖstoryᚗcomᚋstoryᚋappᚋinter
 			if !isLen1 {
 				defer wg.Done()
 			}
-			ret[i] = ec.marshalOTodo2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, sel, v[i])
+			ret[i] = ec.marshalOTodo2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx, sel, v[i])
 		}
 		if isLen1 {
 			f(i)
@@ -5441,21 +5441,21 @@ func (ec *executionContext) marshalOTodo2ᚕᚖstoryᚗcomᚋstoryᚋappᚋinter
 	return ret
 }
 
-func (ec *executionContext) marshalOTodo2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx context.Context, sel ast.SelectionSet, v *model.Todo) graphql.Marshaler {
+func (ec *executionContext) marshalOTodo2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodo(ctx context.Context, sel ast.SelectionSet, v *model.Todo) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return ec._Todo(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalOTodoStatus2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx context.Context, sel ast.SelectionSet, v *model.TodoStatus) graphql.Marshaler {
+func (ec *executionContext) marshalOTodoStatus2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐTodoStatus(ctx context.Context, sel ast.SelectionSet, v *model.TodoStatus) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}
 	return ec._TodoStatus(ctx, sel, v)
 }
 
-func (ec *executionContext) marshalOUser2ᚖstoryᚗcomᚋstoryᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v *model.User) graphql.Marshaler {
+func (ec *executionContext) marshalOUser2ᚖgoᚑgqlᚑsampleᚋappᚋinternalᚋinfrastructureᚋserverᚋgraphᚋmodelᚐUser(ctx context.Context, sel ast.SelectionSet, v *model.User) graphql.Marshaler {
 	if v == nil {
 		return graphql.Null
 	}

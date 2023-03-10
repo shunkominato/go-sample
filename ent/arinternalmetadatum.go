@@ -4,11 +4,11 @@ package ent
 
 import (
 	"fmt"
+	"go-gql-sample/app/ent/arinternalmetadatum"
 	"strings"
 	"time"
 
 	"entgo.io/ent/dialect/sql"
-	"go-gql-sample/app/ent/arinternalmetadatum"
 )
 
 // ArInternalMetadatum is the model entity for the ArInternalMetadatum schema.

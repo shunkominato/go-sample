@@ -4,13 +4,13 @@ package enttest
 
 import (
 	"context"
-
 	"go-gql-sample/app/ent"
 	// required by schema hooks.
 	_ "go-gql-sample/app/ent/runtime"
 
-	"entgo.io/ent/dialect/sql/schema"
 	"go-gql-sample/app/ent/migrate"
+
+	"entgo.io/ent/dialect/sql/schema"
 )
 
 type (

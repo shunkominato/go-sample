@@ -4,13 +4,13 @@ package ent
 
 import (
 	"fmt"
+	"go-gql-sample/app/ent/todo"
+	"go-gql-sample/app/ent/todostatus"
+	"go-gql-sample/app/ent/user"
 	"strings"
 	"time"
 
 	"entgo.io/ent/dialect/sql"
-	"go-gql-sample/app/ent/todo"
-	"go-gql-sample/app/ent/todostatus"
-	"go-gql-sample/app/ent/user"
 )
 
 // Todo is the model entity for the Todo schema.

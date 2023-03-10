@@ -4,10 +4,10 @@ package ent
 
 import (
 	"fmt"
+	"go-gql-sample/app/ent/schemamigration"
 	"strings"
 
 	"entgo.io/ent/dialect/sql"
-	"go-gql-sample/app/ent/schemamigration"
 )
 
 // SchemaMigration is the model entity for the SchemaMigration schema.

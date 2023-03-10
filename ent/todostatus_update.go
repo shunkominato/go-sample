@@ -6,14 +6,14 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"go-gql-sample/app/ent/predicate"
+	"go-gql-sample/app/ent/todo"
+	"go-gql-sample/app/ent/todostatus"
 	"time"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"go-gql-sample/app/ent/predicate"
-	"go-gql-sample/app/ent/todo"
-	"go-gql-sample/app/ent/todostatus"
 )
 
 // TodoStatusUpdate is the builder for updating TodoStatus entities.

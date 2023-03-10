@@ -3,8 +3,9 @@
 package schemamigration
 
 import (
-	"entgo.io/ent/dialect/sql"
 	"go-gql-sample/app/ent/predicate"
+
+	"entgo.io/ent/dialect/sql"
 )
 
 // ID filters vertices based on their ID field.

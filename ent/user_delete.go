@@ -4,12 +4,12 @@ package ent
 
 import (
 	"context"
+	"go-gql-sample/app/ent/predicate"
+	"go-gql-sample/app/ent/user"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"go-gql-sample/app/ent/predicate"
-	"go-gql-sample/app/ent/user"
 )
 
 // UserDelete is the builder for deleting a User entity.

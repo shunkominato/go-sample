@@ -6,16 +6,16 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"reflect"
-
-	"entgo.io/ent"
-	"entgo.io/ent/dialect/sql"
-	"entgo.io/ent/dialect/sql/sqlgraph"
 	"go-gql-sample/app/ent/arinternalmetadatum"
 	"go-gql-sample/app/ent/schemamigration"
 	"go-gql-sample/app/ent/todo"
 	"go-gql-sample/app/ent/todostatus"
 	"go-gql-sample/app/ent/user"
+	"reflect"
+
+	"entgo.io/ent"
+	"entgo.io/ent/dialect/sql"
+	"entgo.io/ent/dialect/sql/sqlgraph"
 )
 
 // ent aliases to avoid import conflicts in user's code.

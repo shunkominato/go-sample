@@ -4,12 +4,12 @@ package ent
 
 import (
 	"context"
+	"go-gql-sample/app/ent/predicate"
+	"go-gql-sample/app/ent/todo"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"go-gql-sample/app/ent/predicate"
-	"go-gql-sample/app/ent/todo"
 )
 
 // TodoDelete is the builder for deleting a Todo entity.

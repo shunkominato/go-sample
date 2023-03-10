@@ -5,7 +5,6 @@ package hook
 import (
 	"context"
 	"fmt"
-
 	"go-gql-sample/app/ent"
 )
 

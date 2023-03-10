@@ -5,13 +5,13 @@ package ent
 import (
 	"context"
 	"fmt"
+	"go-gql-sample/app/ent/predicate"
+	"go-gql-sample/app/ent/schemamigration"
 	"math"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"go-gql-sample/app/ent/predicate"
-	"go-gql-sample/app/ent/schemamigration"
 )
 
 // SchemaMigrationQuery is the builder for querying SchemaMigration entities.

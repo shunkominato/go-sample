@@ -5,13 +5,13 @@ package ent
 import (
 	"context"
 	"fmt"
+	"go-gql-sample/app/ent/arinternalmetadatum"
+	"go-gql-sample/app/ent/predicate"
 	"math"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"go-gql-sample/app/ent/arinternalmetadatum"
-	"go-gql-sample/app/ent/predicate"
 )
 
 // ArInternalMetadatumQuery is the builder for querying ArInternalMetadatum entities.

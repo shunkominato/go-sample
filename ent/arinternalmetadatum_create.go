@@ -6,11 +6,11 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"go-gql-sample/app/ent/arinternalmetadatum"
 	"time"
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"go-gql-sample/app/ent/arinternalmetadatum"
 )
 
 // ArInternalMetadatumCreate is the builder for creating a ArInternalMetadatum entity.

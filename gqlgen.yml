@@ -1,11 +1,7 @@
 # Where are all the schema files located? globs are supported eg  src/**/*.graphqls
 schema:
   - internal/infrastructure/server/graph/**/*.graphqls
-# loader:
-#   custom:
-#     - regex: "graph/**/*.graphqls"
-#       filename: '{base}/resolver/{name|removeSuffix("Query")|removeSuffix("Mutation")}/{name}.go'
-# Where should the generated server code go?
+
 exec:
   filename: internal/infrastructure/server/graph/generated.go
   package: graph

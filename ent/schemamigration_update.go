@@ -6,12 +6,12 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"go-gql-sample/app/ent/predicate"
+	"go-gql-sample/app/ent/schemamigration"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"go-gql-sample/app/ent/predicate"
-	"go-gql-sample/app/ent/schemamigration"
 )
 
 // SchemaMigrationUpdate is the builder for updating SchemaMigration entities.

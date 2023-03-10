@@ -6,16 +6,16 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"sync"
-	"time"
-
-	"entgo.io/ent"
-	"entgo.io/ent/dialect/sql"
 	"go-gql-sample/app/ent/arinternalmetadatum"
 	"go-gql-sample/app/ent/predicate"
 	"go-gql-sample/app/ent/todo"
 	"go-gql-sample/app/ent/todostatus"
 	"go-gql-sample/app/ent/user"
+	"sync"
+	"time"
+
+	"entgo.io/ent"
+	"entgo.io/ent/dialect/sql"
 )
 
 const (

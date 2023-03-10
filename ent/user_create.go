@@ -6,12 +6,12 @@ import (
 	"context"
 	"errors"
 	"fmt"
+	"go-gql-sample/app/ent/todo"
+	"go-gql-sample/app/ent/user"
 	"time"
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"
-	"go-gql-sample/app/ent/todo"
-	"go-gql-sample/app/ent/user"
 )
 
 // UserCreate is the builder for creating a User entity.
