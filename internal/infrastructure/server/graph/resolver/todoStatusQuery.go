@@ -1,4 +1,4 @@
-package graph
+package resolver
 
 // This file will be automatically regenerated based on the schema, any resolver implementations
 // will be copied through when generating and any unknown code will be moved to the end.
@@ -6,11 +6,12 @@ package graph
 
 import (
 	"context"
-	"fmt"
 	"go-gql-sample/app/internal/infrastructure/server/graph/model"
+	service "go-gql-sample/app/internal/service/todo_status"
 )
 
 // TodoStatus is the resolver for the todoStatus field.
 func (r *queryResolver) TodoStatus(ctx context.Context, id *int) (*model.TodoStatus, error) {
-	panic(fmt.Errorf("not implemented: TodoStatus - todoStatus"))
+	res, err := service.GetTodoStatus(ctx, r.Client)
+	return res, err
 }

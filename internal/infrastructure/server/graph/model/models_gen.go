@@ -33,10 +33,10 @@ type PaginationInfo struct {
 }
 
 type Todo struct {
-	ID         string      `json:"id"`
-	Todo       string      `json:"todo"`
-	TodoStatus *TodoStatus `json:"todoStatus"`
-	User       *User       `json:"user"`
+	ID           string `json:"id"`
+	Todo         string `json:"todo"`
+	TodoStatusID int    `json:"todoStatusId"`
+	User         int    `json:"user"`
 }
 
 func (Todo) IsNode()            {}

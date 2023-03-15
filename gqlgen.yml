@@ -20,7 +20,7 @@ model:
 resolver:
   layout: follow-schema
   dir: internal/infrastructure/server/graph/resolver
-  package: graph
+  package: resolver
   filename_template: "/{name}.go"
 
 # Optional: turn on use ` + "`" + `gqlgen:"fieldName"` + "`" + ` tags in your models

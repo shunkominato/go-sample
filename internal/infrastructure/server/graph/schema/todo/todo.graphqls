@@ -1,8 +1,8 @@
 type Todo implements Node {
   id: ID!
   todo: String!
-  todoStatus: TodoStatus!
-  user: User!
+  todoStatusId: Int!
+  user: Int!
 }
 
 type TodoPagination implements Pagination {
