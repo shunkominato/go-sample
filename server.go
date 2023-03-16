@@ -19,7 +19,7 @@ const defaultPort = "8080"
 
 func graphqlHandler() gin.HandlerFunc {
 	db, _ := db.NewDatabase()	
-	db.EntClient()
+	client := db.EntClient()
 
 
 	
