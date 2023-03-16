@@ -1,14 +1,14 @@
 package main
 
 import (
-	"fmt"
 	"log"
 	"net/http"
 	"os"
 
-	"go-gql-sample/app/ent"
 	"go-gql-sample/app/internal/infrastructure/server/graph"
 	"go-gql-sample/app/internal/infrastructure/server/graph/resolver"
+	"go-gql-sample/app/pkg/config"
+	"go-gql-sample/app/pkg/db"
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
@@ -17,17 +17,12 @@ import (
 
 const defaultPort = "8080"
 
-func dbInit() *ent.Client {
-	client, _ := ent.Open("postgres", fmt.Sprintf("host=%s port=%s user=%s dbname=%s password=%s sslmode=disable",
-	"rails_api-db-1", "5432", "postgres", "rails_sample", "postgres"))
-
-	return client
-}
-
 func graphqlHandler() gin.HandlerFunc {
-	// NewExecutableSchema and Config are in the generated.go file
-	// Resolver is in the resolver.go file
-	client := dbInit()
+	db, _ := db.NewDatabase()	
+	db.EntClient()
+
+
+	
 	h := handler.NewDefaultServer(graph.NewExecutableSchema(graph.Config{Resolvers: &resolver.Resolver{Client: client}}))
 
 	return func(c *gin.Context) {
@@ -44,6 +39,7 @@ func playgroundHandler() gin.HandlerFunc {
 }
 
 func main() {
+	config.SetConfig()
 
 	port := os.Getenv("PORT")
 	if port == "" {
