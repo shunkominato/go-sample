@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"go-gql-sample/app/ent"
 	"os"
+
+	_ "github.com/lib/pq"
 )
 
 type Database struct {
