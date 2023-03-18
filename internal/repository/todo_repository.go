@@ -6,15 +6,15 @@ import (
 	"go-gql-sample/app/ent"
 )
 type TodoRepository struct {
-	client *ent.Client
+	Client *ent.Client
 }
 
 func NewTodoRepository(client *ent.Client) *TodoRepository {
-	return &TodoRepository{client: client}
+	return &TodoRepository{Client: client}
 }
 
 func (repo *TodoRepository) GetTodoList(ctx context.Context) ([]*ent.Todo, error) {
-	todoList, err := repo.client.Todo.Query().All(ctx)
+	todoList, err := repo.Client.Todo.Query().All(ctx)
 	if err != nil {
 		if ent.IsNotFound(err) {
 			return nil, errors.New("user not found")

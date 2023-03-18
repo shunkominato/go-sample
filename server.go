@@ -21,7 +21,7 @@ func graphqlHandler() gin.HandlerFunc {
 	db, _ := db.NewDatabase()	
 	client := db.EntClient()
 	
-	h := handler.NewDefaultServer(graph.NewExecutableSchema(graph.Config{Resolvers: &resolver.Resolver{client: client}}))
+	h := handler.NewDefaultServer(graph.NewExecutableSchema(graph.Config{Resolvers: &resolver.Resolver{Client: client}}))
 
 	return func(c *gin.Context) {
 		h.ServeHTTP(c.Writer, c.Request)

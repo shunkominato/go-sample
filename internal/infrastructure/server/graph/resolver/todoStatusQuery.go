@@ -12,6 +12,6 @@ import (
 
 // TodoStatus is the resolver for the todoStatus field.
 func (r *queryResolver) TodoStatus(ctx context.Context, id *int) (*model.TodoStatus, error) {
-	res, err := service.GetTodoStatus(ctx, r.client)
+	res, err := service.GetTodoStatus(ctx, r.Client)
 	return res, err
 }

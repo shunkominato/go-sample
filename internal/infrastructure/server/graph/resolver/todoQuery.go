@@ -21,9 +21,9 @@ func (r *queryResolver) Todo(ctx context.Context, id *int) (*model.Todo, error) 
 
 // Todos is the resolver for the todos field.
 func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
-	repo := repository.NewTodoRepository(r.client)
+	repo := repository.NewTodoRepository(r.Client)
 	s := todoService.NewTodoService(*repo)
-	res, err := s.GetTodoList(ctx, r.client)
+	res, err := s.GetTodoList(ctx, r.Client)
 	var todosModel []*model.Todo
 	for _, todo := range res {
 		todosModel = append(todosModel, &model.Todo{
