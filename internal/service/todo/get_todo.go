@@ -14,7 +14,7 @@ func NewTodoService(repo repository.TodoRepository) *TodoService {
 	return &TodoService{repo: repo}
 }
 
-func (s *TodoService) GetTodoList(ctx context.Context, client *ent.Client) ([]*ent.Todo, error) {
+func (s *TodoService) GetTodoList(ctx context.Context) ([]*ent.Todo, error) {
 	todoList, err := s.repo.GetTodoList(ctx)
 	if err != nil {
 		if ent.IsNotFound(err) {

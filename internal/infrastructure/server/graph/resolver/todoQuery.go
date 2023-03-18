@@ -23,7 +23,7 @@ func (r *queryResolver) Todo(ctx context.Context, id *int) (*model.Todo, error) 
 func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
 	repo := repository.NewTodoRepository(r.Client)
 	s := todoService.NewTodoService(*repo)
-	res, err := s.GetTodoList(ctx, r.Client)
+	res, err := s.GetTodoList(ctx)
 	var todosModel []*model.Todo
 	for _, todo := range res {
 		todosModel = append(todosModel, &model.Todo{

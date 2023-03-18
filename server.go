@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"os"
 
+	"go-gql-sample/app/ent"
 	"go-gql-sample/app/internal/infrastructure/server/graph"
 	"go-gql-sample/app/internal/infrastructure/server/graph/resolver"
 	"go-gql-sample/app/pkg/config"
@@ -17,10 +18,7 @@ import (
 
 const defaultPort = "8080"
 
-func graphqlHandler() gin.HandlerFunc {
-	db, _ := db.NewDatabase()	
-	client := db.EntClient()
-	
+func graphqlHandler(client *ent.Client) gin.HandlerFunc {	
 	h := handler.NewDefaultServer(graph.NewExecutableSchema(graph.Config{Resolvers: &resolver.Resolver{Client: client}}))
 
 	return func(c *gin.Context) {
@@ -46,8 +44,11 @@ func main() {
 
 	r := gin.Default()
 
+	db, _ := db.NewDatabase()	
+	client := db.EntClient()
+	defer db.Close()
 
-	r.POST("/query", graphqlHandler())
+	r.POST("/query", graphqlHandler(client))
 	r.GET("/", playgroundHandler())
 	r.Run()
 
