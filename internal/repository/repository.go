@@ -4,6 +4,10 @@ import (
 	"go-gql-sample/app/ent"
 )
 
-type Repository struct{
-	Client *ent.Client
+type DBClient struct{
+	client *ent.Client
+}
+
+type Repository interface {
+	TodoRepository
 }

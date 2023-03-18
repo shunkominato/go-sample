@@ -9,7 +9,5 @@ import (
 // It serves as dependency injection for your app, add any dependencies you require here.
 
 type Resolver struct{
-	Client *ent.Client
-	// todos []*model.Todo
-	// todoStatus []*model.TodoStatus
+	client *ent.Client
 }

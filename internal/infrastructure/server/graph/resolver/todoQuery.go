@@ -9,6 +9,7 @@ import (
 	"fmt"
 	"go-gql-sample/app/internal/infrastructure/server/graph"
 	"go-gql-sample/app/internal/infrastructure/server/graph/model"
+	"go-gql-sample/app/internal/repository"
 	todoService "go-gql-sample/app/internal/service/todo"
 	"strconv"
 )
@@ -20,7 +21,9 @@ func (r *queryResolver) Todo(ctx context.Context, id *int) (*model.Todo, error) 
 
 // Todos is the resolver for the todos field.
 func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
-	res, err := todoService.GetTodo(ctx, r.Client)
+	repo := repository.NewTodoRepository(r.client)
+	s := todoService.NewTodoService(*repo)
+	res, err := s.GetTodoList(ctx, r.client)
 	var todosModel []*model.Todo
 	for _, todo := range res {
 		todosModel = append(todosModel, &model.Todo{

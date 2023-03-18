@@ -20,10 +20,8 @@ const defaultPort = "8080"
 func graphqlHandler() gin.HandlerFunc {
 	db, _ := db.NewDatabase()	
 	client := db.EntClient()
-
-
 	
-	h := handler.NewDefaultServer(graph.NewExecutableSchema(graph.Config{Resolvers: &resolver.Resolver{Client: client}}))
+	h := handler.NewDefaultServer(graph.NewExecutableSchema(graph.Config{Resolvers: &resolver.Resolver{client: client}}))
 
 	return func(c *gin.Context) {
 		h.ServeHTTP(c.Writer, c.Request)
@@ -47,6 +45,8 @@ func main() {
 	}
 
 	r := gin.Default()
+
+
 	r.POST("/query", graphqlHandler())
 	r.GET("/", playgroundHandler())
 	r.Run()
