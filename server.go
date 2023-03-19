@@ -14,6 +14,7 @@ import (
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
 	"github.com/gin-gonic/gin"
+	"github.com/joho/godotenv"
 )
 
 const defaultPort = "8080"
@@ -35,6 +36,8 @@ func playgroundHandler() gin.HandlerFunc {
 }
 
 func main() {
+	godotenv.Load(".env")
+
 	config.SetConfig()
 
 	port := os.Getenv("PORT")
