@@ -25,7 +25,9 @@ func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
 	s := todoService.NewTodoService(*repo)
 
 	res, err := s.GetTodoList(ctx)
-
+	if err != nil {
+		return nil, err
+	}
 	var todosModel []*model.Todo
 	for _, todo := range res {
 		todosModel = append(todosModel, &model.Todo{
