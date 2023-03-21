@@ -6,6 +6,7 @@ package resolver
 
 import (
 	"context"
+	"errors"
 	"fmt"
 	"go-gql-sample/app/internal/infrastructure/server/graph"
 	"go-gql-sample/app/internal/infrastructure/server/graph/model"
@@ -26,9 +27,15 @@ func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
 
 	res, err := s.GetTodoList(ctx)
 	if err != nil {
-		return nil, err
+		return nil, errors.New("todoの取得に失敗しました")
+
 	}
+	if len(res) == 0 {
+		return []*model.Todo{}, nil
+	}
+
 	var todosModel []*model.Todo
+
 	for _, todo := range res {
 		todosModel = append(todosModel, &model.Todo{
 			ID:           strconv.Itoa(todo.ID),
