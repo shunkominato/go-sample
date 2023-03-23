@@ -12,7 +12,6 @@ import (
 	"go-gql-sample/app/internal/infrastructure/server/graph/model"
 	"go-gql-sample/app/internal/repository"
 	todoService "go-gql-sample/app/internal/service/todo"
-	"strconv"
 )
 
 // Todo is the resolver for the todo field.
@@ -36,14 +35,14 @@ func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
 
 	var todosModel []*model.Todo
 
-	for _, todo := range res {
-		todosModel = append(todosModel, &model.Todo{
-			ID:           strconv.Itoa(todo.ID),
-			Todo:         todo.Todo,
-			TodoStatusID: todo.TodoStatusesID,
-			User:         todo.UserID,
-		})
-	}
+	// for _, todo := range res {
+	// 	todosModel = append(todosModel, &model.Todo{
+	// 		ID:           strconv.Itoa(todo.ID),
+	// 		Todo:         todo.Todo,
+	// 		TodoStatusID: todo.TodoStatusesID,
+	// 		User:         todo.Edges.User,
+	// 	})
+	// }
 	return todosModel, err
 }
 

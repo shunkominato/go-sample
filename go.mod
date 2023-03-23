@@ -6,11 +6,15 @@ require (
 	entgo.io/ent v0.11.9
 	github.com/99designs/gqlgen v0.17.25
 	github.com/gin-gonic/gin v1.9.0
+	github.com/graph-gophers/dataloader v5.0.0+incompatible
 	github.com/joho/godotenv v1.5.1
 	github.com/vektah/gqlparser/v2 v2.5.1
 )
 
-require github.com/go-test/deep v1.0.4 // indirect
+require (
+	github.com/go-test/deep v1.0.4 // indirect
+	github.com/opentracing/opentracing-go v1.2.0 // indirect
+)
 
 require (
 	ariga.io/atlas v0.9.1 // indirect

@@ -65,3 +65,7 @@ models:
     fields:
       todo:
         resolver: true
+  Todo:
+    fields:
+      user:
+        resolver: true
