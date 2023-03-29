@@ -36,7 +36,7 @@ type Todo struct {
 	ID           string `json:"id"`
 	Todo         string `json:"todo"`
 	TodoStatusID int    `json:"todoStatusId"`
-	User         *User  `json:"user"`
+	UserID       string  `json:"userId"`
 }
 
 func (Todo) IsNode()            {}

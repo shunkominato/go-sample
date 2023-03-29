@@ -4,6 +4,7 @@ package dataloader
 import (
 	"context"
 	"go-gql-sample/app/ent"
+	"log"
 	"net/http"
 
 	"github.com/graph-gophers/dataloader"
@@ -40,5 +41,7 @@ func Middleware(loaders *Loaders, next http.Handler) http.Handler {
 
 // For returns the dataloader for a given context
 func For(ctx context.Context) *Loaders {
+	log.Print(loadersKey)
+	log.Print(ctx.Value(loadersKey))
 	return ctx.Value(loadersKey).(*Loaders)
 }

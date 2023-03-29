@@ -6,6 +6,8 @@ import (
 	"os"
 
 	"go-gql-sample/app/ent"
+	"go-gql-sample/app/internal/dataloader"
+	dataloader "go-gql-sample/app/internal/infrastructure/dataloader/dataloader"
 	"go-gql-sample/app/internal/infrastructure/server/graph"
 	"go-gql-sample/app/internal/infrastructure/server/graph/resolver"
 	"go-gql-sample/app/pkg/config"
@@ -51,7 +53,9 @@ func main() {
 	client := db.EntClient()
 	defer db.Close()
 
-	r.POST("/query", graphqlHandler(client))
+	ldrs := dataloader.NewLoaders(client)
+	aa := graphqlHandler(client)
+	r.POST("/query", dataloader.Middleware(ldrs, ))
 	r.GET("/", playgroundHandler())
 	r.Run()
 

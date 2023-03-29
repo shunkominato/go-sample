@@ -9,18 +9,17 @@ import (
 	dataloader "go-gql-sample/app/internal/dataloader"
 	"go-gql-sample/app/internal/infrastructure/server/graph"
 	"go-gql-sample/app/internal/infrastructure/server/graph/model"
+	"log"
 )
 
 // User is the resolver for the user field.
 func (r *todoResolver) User(ctx context.Context, obj *model.Todo) (*model.User, error) {
-	if obj.UserID == nil {
-		return nil, nil
-	}
-	user, err := dataloader.LoadUser(ctx, *obj.UserID)
+	log.Print("@@@@@@@@@@@@@@")
+	user, err := dataloader.LoadUser(ctx, obj.UserID)
 	if err != nil {
 			return nil, err
 	}
-	return user, nil
+	return user, err
 }
 
 // Todo returns graph.TodoResolver implementation.
