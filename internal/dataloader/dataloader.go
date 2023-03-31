@@ -5,8 +5,8 @@ import (
 	"context"
 	"go-gql-sample/app/ent"
 	"log"
-	"net/http"
 
+	"github.com/gin-gonic/gin"
 	"github.com/graph-gophers/dataloader"
 )
 
@@ -29,19 +29,21 @@ func NewLoaders(client *ent.Client) *Loaders {
 	return loaders
 }
 
-// Middleware injects data loaders into the context
-func Middleware(loaders *Loaders, next http.Handler) http.Handler {
-	// return a middleware that injects the loader to the request context
-	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
-		nextCtx := context.WithValue(r.Context(), loadersKey, loaders)
-		r = r.WithContext(nextCtx)
-		next.ServeHTTP(w, r)
-	})
+func Middleware(loaders *Loaders) gin.HandlerFunc {
+	return func(c *gin.Context) {
+		ctx := context.WithValue(c.Request.Context(), "dataloaders", loaders)
+		c.Request = c.Request.WithContext(ctx)
+		c.Next()
+	}
 }
 
 // For returns the dataloader for a given context
 func For(ctx context.Context) *Loaders {
-	log.Print(loadersKey)
-	log.Print(ctx.Value(loadersKey))
+	ginContext := ctx.Value("dataloaders")
+	gc, ok := ginContext.(*gin.Context)
+
+	log.Print("gin**********")
+	log.Print(gc)
+	log.Print(ok)
 	return ctx.Value(loadersKey).(*Loaders)
 }
