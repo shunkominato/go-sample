@@ -55,11 +55,11 @@ func main() {
 	client := db.EntClient()
 	defer db.Close()
 
-	r.POST("/query", graphqlHandler(client))
-	r.GET("/", playgroundHandler())
-
 	loaders := Dataloader.NewLoaders(client)
 	r.Use(Dataloader.Middleware(loaders))
+
+	r.POST("/query", graphqlHandler(client))
+	r.GET("/", playgroundHandler())
 
 	r.Run()
 

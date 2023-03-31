@@ -31,7 +31,7 @@ func NewLoaders(client *ent.Client) *Loaders {
 
 func Middleware(loaders *Loaders) gin.HandlerFunc {
 	return func(c *gin.Context) {
-		ctx := context.WithValue(c.Request.Context(), "dataloaders", loaders)
+		ctx := context.WithValue(c.Request.Context(), "GinContextKey", c)
 		c.Request = c.Request.WithContext(ctx)
 		c.Next()
 	}
@@ -39,7 +39,9 @@ func Middleware(loaders *Loaders) gin.HandlerFunc {
 
 // For returns the dataloader for a given context
 func For(ctx context.Context) *Loaders {
-	ginContext := ctx.Value("dataloaders")
+	ginContext := ctx.Value("GinContextKey")
+	log.Print("ginContext**********")
+	log.Print(ginContext)
 	gc, ok := ginContext.(*gin.Context)
 
 	log.Print("gin**********")
