@@ -10,16 +10,25 @@ import (
 	"go-gql-sample/app/internal/infrastructure/server/graph"
 	"go-gql-sample/app/internal/infrastructure/server/graph/model"
 	"log"
+	"strconv"
 )
 
 // User is the resolver for the user field.
 func (r *todoResolver) User(ctx context.Context, obj *model.Todo) (*model.User, error) {
 	log.Print("@@@@@@@@@@@@@@")
-	user, err := dataloader.LoadUser(ctx, obj.UserID)
+	res, err := dataloader.LoadUser(ctx, obj.UserID)
 	if err != nil {
 			return nil, err
 	}
-	return user, err
+
+	var usersModel []*model.User
+	for _, user := range res {
+		usersModel = append(usersModel, &model.User{
+			ID:           strconv.Itoa(user.ID),
+			Name:         user.Name,
+		})
+	}
+	return usersModel[0], err
 }
 
 // Todo returns graph.TodoResolver implementation.
