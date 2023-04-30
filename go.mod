@@ -5,6 +5,7 @@ go 1.20
 require (
 	entgo.io/ent v0.11.9
 	github.com/99designs/gqlgen v0.17.25
+	github.com/gin-contrib/cors v1.4.0
 	github.com/gin-gonic/gin v1.9.0
 	github.com/graph-gophers/dataloader v5.0.0+incompatible
 	github.com/joho/godotenv v1.5.1

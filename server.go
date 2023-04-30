@@ -14,6 +14,7 @@ import (
 
 	"github.com/99designs/gqlgen/graphql/handler"
 	"github.com/99designs/gqlgen/graphql/playground"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"github.com/joho/godotenv"
 )
@@ -57,6 +58,10 @@ func main() {
 
 	loaders := Dataloader.NewLoaders(client)
 	r.Use(Dataloader.Middleware(loaders))
+
+	config := cors.DefaultConfig()
+	config.AllowAllOrigins = true
+	r.Use(cors.New(config))
 
 	r.POST("/query", graphqlHandler(client))
 	r.GET("/", playgroundHandler())
