@@ -6,7 +6,7 @@ package resolver
 
 import (
 	"context"
-	dataloader "go-gql-sample/app/internal/dataloader"
+	"go-gql-sample/app/internal/dataloader"
 	"go-gql-sample/app/internal/infrastructure/server/graph"
 	"go-gql-sample/app/internal/infrastructure/server/graph/model"
 	"log"
@@ -16,16 +16,17 @@ import (
 // User is the resolver for the user field.
 func (r *todoResolver) User(ctx context.Context, obj *model.Todo) (*model.User, error) {
 	log.Print("@@@@@@@@@@@@@@")
+	log.Print(obj)
 	res, err := dataloader.LoadUser(ctx, obj.UserID)
 	if err != nil {
-			return nil, err
+		return nil, err
 	}
 
 	var usersModel []*model.User
 	for _, user := range res {
 		usersModel = append(usersModel, &model.User{
-			ID:           strconv.Itoa(user.ID),
-			Name:         user.Name,
+			ID:   strconv.Itoa(user.ID),
+			Name: user.Name,
 		})
 	}
 	return usersModel[0], err

@@ -12,6 +12,7 @@ import (
 	"go-gql-sample/app/internal/infrastructure/server/graph/model"
 	"go-gql-sample/app/internal/repository"
 	todoService "go-gql-sample/app/internal/service/todo"
+	"log"
 	"strconv"
 )
 
@@ -41,9 +42,10 @@ func (r *queryResolver) Todos(ctx context.Context) ([]*model.Todo, error) {
 			ID:           strconv.Itoa(todo.ID),
 			Todo:         todo.Todo,
 			TodoStatusID: todo.TodoStatusesID,
-			UserID:         strconv.Itoa(todo.UserID),
+			UserID:       strconv.Itoa(todo.UserID),
 		})
 	}
+	log.Print("todomodel")
 	return todosModel, err
 }
 
